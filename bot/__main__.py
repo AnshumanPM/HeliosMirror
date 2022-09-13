@@ -136,7 +136,6 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 <b>/{BotCommands.EvalCommand}</b>: Run Python Code Line | Lines (Only Owner).<br><br>
 <b>/{BotCommands.ExecCommand}</b>: Run Commands In Exec (Only Owner).<br><br>
 <b>/{BotCommands.ClearLocalsCommand}</b>: Clear <b>{BotCommands.EvalCommand}</b> or <b>{BotCommands.ExecCommand}</b> locals (Only Owner).<br><br>
-<b>RSS Related Commands:</b><br>
 '''
 
 help_string = f'''
