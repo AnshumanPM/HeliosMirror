@@ -37,8 +37,7 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'<b>Commit Date:</b> {last_commit}\n\n'\
-            f'<b>Bot Uptime:</b> {currentTime}\n\n'\
+    stats = f'<b>Bot Uptime:</b> {currentTime}\n\n'\
             f'<b>Total Disk Space:</b> {total}\n'\
             f'<b>Used:</b> {used} | <b>Free:</b> {free}\n\n'\
             f'<b>Up:</b> {sent} | '\
@@ -64,7 +63,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not an Authorized user, deploy your own helios-mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('Not an Authorized user', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -142,18 +141,13 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 <b>/{BotCommands.ExecCommand}</b>: Run Commands In Exec (Only Owner).<br><br>
 <b>/{BotCommands.ClearLocalsCommand}</b>: Clear <b>{BotCommands.EvalCommand}</b> or <b>{BotCommands.ExecCommand}</b> locals (Only Owner).<br><br>
 <b>RSS Related Commands:</b><br>
-<b>/{BotCommands.RssListCommand}</b>: List all subscribed rss feed info (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssGetCommand}</b>: Force fetch last N links (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssSubCommand}</b>: Subscribe new rss feed (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssUnSubCommand}</b>: Unubscribe rss feed by title (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssSettingsCommand}</b>[query]: Rss Settings (Only Owner & Sudo).<br><br>
 '''
 help_string = f'''
 Hei, Need Help!!
 '''
 try:
     help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='Anshuman Mirror Help',
         content=help_string_telegraph,
     )["path"]
 except Exception as err:
